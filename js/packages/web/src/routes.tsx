@@ -13,6 +13,7 @@ import {
 } from './views';
 import { AdminView } from './views/admin';
 import { BillingView } from './views/auction/billing';
+import { WalletView } from './views/wallet';
 
 export function Routes() {
   return (
@@ -53,6 +54,11 @@ export function Routes() {
               exact
               path="/auction/:id/billing"
               component={() => <BillingView />}
+            />
+            <Route
+              exact
+              path="/wallet"
+              component={() => <WalletView />}
             />
             <Route path="/" component={() => <HomeView />} />
           </Switch>

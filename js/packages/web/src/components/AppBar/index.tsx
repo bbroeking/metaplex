@@ -37,6 +37,11 @@ const UserActions = () => {
               Sell
             </Button>
           </Link>
+          <Link to={`/wallet`}>
+            <Button className="connector" type="primary">
+              Wallet
+            </Button>
+          </Link>
         </>
       )}
     </>
