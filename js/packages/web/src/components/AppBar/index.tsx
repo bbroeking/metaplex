@@ -27,7 +27,7 @@ const UserActions = () => {
           {/* <Link to={`#`}>
             <Button className="app-btn">Bids</Button>
           </Link> */}
-          {canCreate ? (
+          {/* {canCreate ? (
             <Link to={`/art/create`}>
               <Button className="app-btn">Create</Button>
             </Link>
@@ -36,10 +36,35 @@ const UserActions = () => {
             <Button className="connector" type="primary">
               Sell
             </Button>
-          </Link>
-          <Link to={`/wallet`}>
+          </Link> */}
+          <Link to={`/home`}>
             <Button className="connector" type="primary">
-              Wallet
+              CHYMERV
+            </Button>
+          </Link>
+          <Link to={`/swap`}>
+            <Button className="connector" type="primary">
+              Swap
+            </Button>
+          </Link>
+          <Link to={`/stake`}>
+            <Button className="connector" type="primary">
+              Stake
+            </Button>
+          </Link>
+          <Link to={`/candy-machine`}>
+            <Button className="connector" type="primary">
+              Claim NFT
+            </Button>
+          </Link>
+          <Link to={`/play`}>
+            <Button className="connector" type="primary">
+              Play
+            </Button>
+          </Link>
+          <Link to={`/shop`}>
+            <Button className="connector" type="primary">
+              Shop
             </Button>
           </Link>
         </>
@@ -118,17 +143,17 @@ export const AppBar = () => {
 
   return (
     <>
-      <div className="app-left app-bar-box">
+      {/* <div className="app-left app-bar-box">
         {window.location.hash !== '#/analytics' && <Notifications />}
         <div className="divider" />
         <MetaplexMenu />
-      </div>
+      </div> */}
       {connected ? (
-        <div className="app-right app-bar-box">
+        <div className="app-bar-box">
           <UserActions />
           <CurrentUserBadge
-            showBalance={false}
-            showAddress={false}
+            showBalance={true}
+            showAddress={true}
             iconSize={24}
           />
         </div>

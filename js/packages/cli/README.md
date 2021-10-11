@@ -2,14 +2,19 @@
 
 ## Steps to reproduce
 * cd metaplex/js/packages/cli
-* metaplex upload ./assets --keypair ~/.config/solana/id.json NOTE: You need to delete the file created .cache/devnet-temp to be able to upload successfully again. Additionally, in this file you will find the config: "Deq1nSg2JCpd11amfpwVNi2utbtJ9dhKBikeJKh33TxA". This is used as the env variable REACT_APP_CANDY_MACHINE_CONFIG.
+* metaplex upload ./assets --keypair ~/.config/solana/id.json 
+NOTE: You need to delete the file created .cache/devnet-temp to be able to upload successfully again. Additionally, in this file you will find the config: "Deq1nSg2JCpd11amfpwVNi2utbtJ9dhKBikeJKh33TxA". This is used as the env variable REACT_APP_CANDY_MACHINE_CONFIG.
 * metaplex verify --keypair ~/.config/solana/id.json  
-* metaplex create_candy_machine -e devnet -k ~/.config/solana/id.json NOTE: the CLI will print out something like this below. Keep note of the pubkey, it will be the env varible REACT_APP_CANDY_MACHINE_ID
+* metaplex create_candy_machine -e devnet -k ~/.config/solana/id.json 
 ```
+NOTE: the CLI will print out something like this below.
+Keep note of the pubkey, it will be the env varible REACT_APP_CANDY_MACHINE_ID
 create_candy_machine finished. candy machine pubkey: ECUNZ1uwZxxV3nU2WRvGzhpqfDsLku2JEXFpP6mkzehk
 ```
-* metaplex update_candy_machine -d "17 Sep 2021 00:12:00 GMT" --keypair ~/.config/solana/id.json NOTE: the CLI will print out something like this below. Keep note of the timestamp for the UI, it will be the env variable REACT_APP_CANDY_START_DATE
+* metaplex update_candy_machine -d "17 Sep 2021 00:12:00 GMT" --keypair ~/.config/solana/id.json 
+
 ```
+NOTE: the CLI will print out something like this below. Keep note of the timestamp for the UI, it will be the env variable REACT_APP_CANDY_START_DATE
  - updated startDate timestamp: 1631837520 (17 Sep 2021 00:12:00 GMT)
 ```
 

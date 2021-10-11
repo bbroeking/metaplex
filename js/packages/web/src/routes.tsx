@@ -15,6 +15,11 @@ import { AdminView } from './views/admin';
 import { BillingView } from './views/auction/billing';
 import AuctionMaker from './views/auctionMaker';
 import { WalletView } from './views/wallet';
+import MintMachine from './views/candyMachine';
+import PlayPage from './views/play';
+import SwapPage from './views/swap';
+import StakePage from './views/stake';
+import ShopPage from './views/Shop';
 
 export function Routes() {
   return (
@@ -66,6 +71,31 @@ export function Routes() {
              path="/maker"
              component={() => <AuctionMaker />}
             />
+            <Route
+              exact 
+              path="/candy-machine"
+              component={() => <MintMachine />}
+              />
+            <Route
+              exact 
+              path="/play"
+              component={() => <PlayPage />}
+              />
+            <Route
+              exact 
+              path="/swap"
+              component={() => <SwapPage />}
+              />
+            <Route
+              exact 
+              path="/stake"
+              component={() => <StakePage />}
+              />
+             <Route
+              exact 
+              path="/shop"
+              component={() => <ShopPage />}
+              />
             <Route path="/" component={() => <HomeView />} />
           </Switch>
         </Providers>

@@ -4,8 +4,9 @@ import { Layout } from 'antd';
 import { LABELS } from '../../constants';
 import { AppBar } from '../AppBar';
 import useWindowDimensions from '../../utils/layout';
+import InfoBar from '../InfoBar';
 
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 const paddingForLayout = (width: number) => {
   if (width <= 768) return '5px 10px';
@@ -30,6 +31,9 @@ export const AppLayout = React.memo((props: any) => {
         <Content style={{ overflow: 'scroll', paddingBottom: 50 }}>
           {props.children}
         </Content>
+        <Footer>
+          <InfoBar></InfoBar>
+        </Footer>
       </Layout>
     </>
   );
